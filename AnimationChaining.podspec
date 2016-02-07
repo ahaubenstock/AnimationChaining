@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 	s.summary 		= 'An easy way to chain animations and perform delayed ones.'
 	s.authors		= 'Adam Haubenstock'
 	s.source		= { :git => '/.git'}
-	s.source_files	= 'AnimationChaining/*.{h,swift}'
+	s.source_files	= 'AnimationChaining/Source/*.{h,swift}'
 	s.requires_arc	= true
 
 	s.ios.deployment_target	= '8.0'
