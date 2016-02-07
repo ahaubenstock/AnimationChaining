@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B41C42D1C67AAC400882ED2 /* Chainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B41C42C1C67AAC400882ED2 /* Chainable.swift */; };
 		2B73CC331C671B4B007F63D9 /* AnimationChaining.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B73CC321C671B4B007F63D9 /* AnimationChaining.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B73CC3B1C671B5C007F63D9 /* AnimationChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B73CC3A1C671B5C007F63D9 /* AnimationChain.swift */; };
+		2B73CC3F1C671B64007F63D9 /* AnimationPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B73CC3C1C671B64007F63D9 /* AnimationPhase.swift */; };
+		2B73CC401C671B64007F63D9 /* AnimationTypealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B73CC3D1C671B64007F63D9 /* AnimationTypealiases.swift */; };
+		2B73CC411C671B64007F63D9 /* DelayedAnimationPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B73CC3E1C671B64007F63D9 /* DelayedAnimationPhase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B41C42C1C67AAC400882ED2 /* Chainable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chainable.swift; sourceTree = "<group>"; };
 		2B73CC2F1C671B4B007F63D9 /* AnimationChaining.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimationChaining.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B73CC321C671B4B007F63D9 /* AnimationChaining.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationChaining.h; sourceTree = "<group>"; };
-		2B73CC341C671B4B007F63D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B73CC341C671B4B007F63D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		2B73CC3A1C671B5C007F63D9 /* AnimationChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationChain.swift; sourceTree = "<group>"; };
+		2B73CC3C1C671B64007F63D9 /* AnimationPhase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationPhase.swift; sourceTree = "<group>"; };
+		2B73CC3D1C671B64007F63D9 /* AnimationTypealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTypealiases.swift; sourceTree = "<group>"; };
+		2B73CC3E1C671B64007F63D9 /* DelayedAnimationPhase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayedAnimationPhase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,9 +57,15 @@
 			isa = PBXGroup;
 			children = (
 				2B73CC321C671B4B007F63D9 /* AnimationChaining.h */,
+				2B73CC3A1C671B5C007F63D9 /* AnimationChain.swift */,
+				2B73CC3C1C671B64007F63D9 /* AnimationPhase.swift */,
+				2B73CC3D1C671B64007F63D9 /* AnimationTypealiases.swift */,
+				2B73CC3E1C671B64007F63D9 /* DelayedAnimationPhase.swift */,
+				2B41C42C1C67AAC400882ED2 /* Chainable.swift */,
 				2B73CC341C671B4B007F63D9 /* Info.plist */,
 			);
-			path = AnimationChaining;
+			name = AnimationChaining;
+			path = AnimationChaining/Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B73CC3F1C671B64007F63D9 /* AnimationPhase.swift in Sources */,
+				2B73CC401C671B64007F63D9 /* AnimationTypealiases.swift in Sources */,
+				2B41C42D1C67AAC400882ED2 /* Chainable.swift in Sources */,
+				2B73CC3B1C671B5C007F63D9 /* AnimationChain.swift in Sources */,
+				2B73CC411C671B64007F63D9 /* DelayedAnimationPhase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,28 +249,33 @@
 		2B73CC381C671B4B007F63D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AnimationChaining/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = haubenstockenterprises.AnimationChaining;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		2B73CC391C671B4B007F63D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AnimationChaining/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = haubenstockenterprises.AnimationChaining;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -276,6 +302,7 @@
 				2B73CC391C671B4B007F63D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
